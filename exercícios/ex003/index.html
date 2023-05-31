@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            color: white;
+            background-color: rgb(92, 122, 204);
+            font: normal 20px Arial;
+        }
+        h1 {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Testando isso aqui</p>
+    <script>
+        var n1 = Number.parseFloat(window.prompt('Digite um número: ')) // Prompt retorna valor em String
+        var n2 = Number(window.prompt('Digite outro número: '))
+
+
+        // Number.parseInt(n) ou Number.parseFloat(n) funcionam tanto quanto Number(n), que é mais moderno
+        // Number(n) escolhe o tipo de número automaticamente
+        // String(n) vale para transformar em String
+        // A mudança de tipo de dado deve ser dada na declaração de variável
+
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+        // (number + number) para adição
+        // (string + string) para concatenação
+
+        // s.length
+        // s.toUpperCase()
+        // s.toLowerCase()
+    </script>
+</body>
+</html>
