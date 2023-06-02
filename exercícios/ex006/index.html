@@ -38,13 +38,16 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+    <div id="area">
         Interaja...
     </div>
 
     <script>
 
     var a = window.document.getElementById('area')
+    a.addEventListener('click', clicar)
+    a.addEventListener('mouseenter', entrar)
+    a.addEventListener('mouseout', sair)
 
 
         function clicar() {
@@ -71,12 +74,12 @@
     </script>
 
     <!-- Eventos DOM do mouse:
-    mouseenter
-    mousemove
-    mousedown
-    mouseup
+    mouseenter/mouseover - mouse dentro
+    mousemove - mouse em movimento
+    mousedown - clica e permanece
+    mouseup - levanta o clique
     click
-    mouseout 
+    mouseout - mouse fora
     
     Pesquisar touch events para smartphone 
 

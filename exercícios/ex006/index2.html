@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function somar() {
+
+            // var a = document.getElementById('txtn1') versão longa
+            // var b = document.getElementById('txtn2') versão longa
+            // var c = document.getElementById('res') versão longa
+            // var d = Number(a.value) versão longa
+            // var e = Number(b.value) versão longa
+            // var f = d + e  versão longa
+
+            // .value é pra reconhecer o que vem na caixa de texto como número em vez de string
+
+            var a = Number(document.getElementById('txtn1').value) // a variável é do valor alocado dentro do elemento desse ID, por isso o .value
+            var b = Number(document.getElementById('txtn2').value)
+            var c = document.getElementById('res')
+            var f = a + b
+
+            c.innerHTML = `A soma dos valores é ${f}.`
+        }
+    </script>
+</body>
+</html>
