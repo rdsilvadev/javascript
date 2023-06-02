@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }    
+
+    html {
+    height: 100%; /* importante pra centralizar verticalmente */
+    }
+
+    body {
+        background: rgb(231, 231, 231);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   
+    
+    div#area {
+        background: rgb(73, 173, 123);
+        color: white;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+
+    <script>
+
+    var a = window.document.getElementById('area')
+
+
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = '#e6ad43'
+            a.style.scale = '1.6'
+            a.style.transition = '.8s'
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou!'
+            a.style.background = '#2f7fb4'
+            a.style.scale = '1.2'
+            a.style.transition = '.8s'
+        }
+
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = '#df5dd4'
+            a.style.scale = '0.8'
+            a.style.transition = '.8s'
+        }
+
+    </script>
+
+    <!-- Eventos DOM do mouse:
+    mouseenter
+    mousemove
+    mousedown
+    mouseup
+    click
+    mouseout 
+    
+    Pesquisar touch events para smartphone 
+
+    sintaxe da função:
+    
+    function ação() {
+
+    }
+    
+    -->
+</body>
+</html>
