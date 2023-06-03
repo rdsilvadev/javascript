@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Condições em JS</title>
+    <title>DETRAN</title>
 </head>
 <body>
-    
+    <h1>Sistema de Multas</h1>
+        Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+        <input type="button" value="Verificar" onclick="calcular()">
+        <div id="sit">Situação: </div>
+    </h1>
+    <script>
+        var vel = Number(document.getElementById('txtvel').value)
+        var sit = document.getElementById('sit')
+
+        function calcular() {
+        if (vel <= 60) {
+            sit.innerHTML = `Você estava dirigindo a ${vel} Km/h. Você não foi multado!` 
+        } else {
+            sit.innerHTML = `Você estava dirigindo a ${vel} Km/h. Você foi multado!`
+        } 
+    }
+    </script>
 </body>
 </html>
