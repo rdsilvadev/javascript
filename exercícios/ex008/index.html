@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de votos</title>
+    <style>
+        input#idade {
+            width: 30px;
+            padding: 2px;
+            outline: none;
+        }
+
+        div#res {
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de votos</h1>
+    <h2>Descubra se você pode votar</h2>
+    <span>Digite sua idade</span>
+    <input type="number" name="idade" id="idade">
+    <input type="button" value="Verificar" id="verificar" onclick="verificar()">
+    <div id="res">Será que você pode votar?</div>
+
+    <script>
+        function verificar() {
+
+            var idade = Number(document.getElementById('idade').value) // sempre lembrar de capturar o valor do input
+            var res = document.getElementById('res')
+            var verificar = document.getElementById('verificar')
+            // verificar.addEventListener('onclick', verificar)
+
+            if (idade < 16) {
+                res.innerHTML += `<div>Você tem ${idade}, logo, não pode votar.</div>` // relembrando que document.write não serve para elemento já referenciado
+            } else if (idade < 18) {
+                res.innerHTML += `<div>Você tem ${idade}, logo, o voto é opcional.</div>`
+            } else if (idade >= 65) {
+                res.innerHTML += `<div>Você tem ${idade}, logo, o voto é opcional.</div>`
+            } else {
+                res.innerHTML += `<div>Você tem ${idade}, logo, o voto é obrigatório.</div>`
+            }           
+        }
+    </script>
+</body>
+</html>
